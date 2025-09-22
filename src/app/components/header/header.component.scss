@@ -1,0 +1,133 @@
+/* === Toolbar fixa no topo === */
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background-color: var(--md-sys-color-primary);
+//   background-color: #1976d2;
+//   color: white;
+}
+
+/* === Logo centralizado === */
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+/* === Links no desktop === */
+.nav-links {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+/* Estilo base dos links no desktop */
+.nav-links a[mat-button] {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Link ativo no desktop */
+.nav-links a.active-link {
+  color: red;
+  font-weight: bold;
+}
+
+/* === Ícone hambúrguer no mobile === */
+.menu-button {
+  margin-left: auto;
+  color: white;
+}
+
+/* === Container do sidenav === */
+.sidenav-container {
+  margin-top: 64px;
+  height: calc(100vh - 64px);
+  overflow: hidden;
+}
+
+/* === Menu lateral no mobile === */
+.sidenav {
+  width: 250px;
+  padding: 16px 0;
+  background-color: white;
+  height: calc(100vh - 64px);
+  position: fixed;
+  top: 64px;
+  right: 0;
+  z-index: 999;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Links no sidenav (um abaixo do outro) */
+.sidenav mat-nav-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav a[mat-list-item] {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  width: 100%;
+}
+
+/* Link ativo no sidenav */
+.sidenav a.active-link {
+  color: red;
+  font-weight: bold;
+}
+
+/* === Backdrop cobrindo toda a tela === */
+::ng-deep .mat-drawer-backdrop {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 998 !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.nav-links a[mat-button],
+.sidenav a[mat-list-item] {
+  transition: color 0.3s ease;
+}
+
+/* === Responsividade === */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .menu-button {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-button {
+    display: none;
+  }
+}

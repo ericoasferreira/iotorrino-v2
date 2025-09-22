@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+// 1. Paletas de cores
+$azure-palette: mat.$blue-palette;
+$red-palette: mat.$red-palette;
+$green-palette: mat.$green-palette;
+
+// 2. Tipografia com variáveis do sistema
+$typography-config: (
+  use-system-variables: true,
+  system-variables-prefix: md-sys,
+);
+
+// 3. Temas completos com densidade como número direto
+$azure-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: $azure-palette,
+    tertiary: mat.$blue-palette,
+  ),
+  typography: $typography-config,
+  density: (
+    scale: 0
+  ),
+));
+
+$red-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: $red-palette,
+    tertiary: mat.$blue-palette,
+  ),
+  typography: $typography-config,
+  density: (
+    scale: 0
+  ),
+));
+
+$green-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: $green-palette,
+    tertiary: mat.$blue-palette,
+  ),
+  typography: $typography-config,
+  density: (
+    scale: 0
+  ),
+));
+
+// 4. Aplicação dos temas via classe no <html>
+.azure-theme {
+  @include mat.theme($azure-theme);
+  @include mat.all-component-themes($azure-theme);
+  @include mat.color-variants-backwards-compatibility($azure-theme);
+  @include mat.typography-hierarchy($azure-theme);
+}
+
+.red-theme {
+    @include mat.theme($red-theme);
+    @include mat.all-component-themes($red-theme);
+    @include mat.color-variants-backwards-compatibility($red-theme);
+    @include mat.typography-hierarchy($red-theme);
+}
+
+.green-theme {
+    @include mat.theme($green-theme);
+    @include mat.all-component-themes($green-theme);
+    @include mat.color-variants-backwards-compatibility($green-theme);
+    @include mat.typography-hierarchy($green-theme);
+}
