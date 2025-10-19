@@ -1,5 +1,7 @@
 <mat-toolbar color="primary" class="toolbar">
-    <span class="logo">Logo</span>
+    <a routerLink="/" class="logo-link">
+        <img src="/images/logo.png" alt="iOtorrino" class="logo">
+    </a>
 
     <!-- @if para mostrar links no desktop -->
     @if (!isMobile) {
@@ -29,6 +31,6 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-        <!-- Conteúdo principal -->
+        <router-outlet></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>

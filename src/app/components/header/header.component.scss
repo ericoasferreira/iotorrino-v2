@@ -1,3 +1,8 @@
+/* === Reset básico === */
+* {
+  box-sizing: border-box;
+}
+
 /* === Toolbar fixa no topo === */
 .toolbar {
   position: fixed;
@@ -11,15 +16,27 @@
   justify-content: space-between;
   padding: 0 16px;
   background-color: var(--md-sys-color-primary);
-//   background-color: #1976d2;
-//   color: white;
+  margin: 0;
+  color: white;
 }
 
 /* === Logo centralizado === */
-.logo {
-  font-weight: bold;
-  font-size: 20px;
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
   margin: 0 auto;
+  transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+  opacity: 0.8;
+}
+
+.logo {
+  width: 32px;
+  height: auto;
+  object-fit: contain;
 }
 
 /* === Links no desktop === */
@@ -55,7 +72,13 @@
 .sidenav-container {
   margin-top: 64px;
   height: calc(100vh - 64px);
-  overflow: hidden;
+}
+
+/* === Conteúdo principal === */
+mat-sidenav-content {
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 /* === Menu lateral no mobile === */
