@@ -25,17 +25,17 @@ export const routes: Routes = [
   { 
     path: 'exames', 
     component: ExamesComponent,
-    data: { breadcrumb: 'Contato' }
+    data: { breadcrumb: 'Exames' }
   },
   { 
     path: 'tratamentos', 
     component: TratamentosComponent,
-    data: { breadcrumb: 'Contato' }
+    data: { breadcrumb: 'Tratamentos' }
   },
   { 
     path: 'artigos', 
     component: ArtigosComponent,
-    data: { breadcrumb: 'Contato' }
+    data: { breadcrumb: 'Artigos' }
   },
 ];
 

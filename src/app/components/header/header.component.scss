@@ -18,6 +18,8 @@
   background-color: var(--md-sys-color-primary);
   margin: 0;
   color: white;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* === Logo centralizado === */
@@ -53,32 +55,71 @@
   color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  position: relative;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+/* Efeito hover nos links */
+.nav-links a[mat-button]:hover {
+  transform: translateY(-1px);
 }
 
 /* Link ativo no desktop */
 .nav-links a.active-link {
-  color: red;
+  color: #ffffff;
   font-weight: bold;
+  transform: translateY(-1px);
+}
+
+/* Indicador animado para link ativo */
+.nav-links a.active-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transform: translateX(-50%);
+  animation: expandIndicator 0.3s ease-out forwards;
+}
+
+@keyframes expandIndicator {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
 }
 
 /* === Ícone hambúrguer no mobile === */
 .menu-button {
   margin-left: auto;
   color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
 }
 
 /* === Container do sidenav === */
 .sidenav-container {
   margin-top: 64px;
   height: calc(100vh - 64px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* === Conteúdo principal === */
 mat-sidenav-content {
-  padding: 20px;
   height: 100%;
   box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* === Menu lateral no mobile === */
@@ -94,6 +135,8 @@ mat-sidenav-content {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Links no sidenav (um abaixo do outro) */
@@ -102,19 +145,55 @@ mat-sidenav-content {
   flex-direction: column;
 }
 
-.sidenav a[mat-list-item] {
+.sidenav a[mat-button] {
   padding: 12px 24px;
   font-size: 16px;
-  color: black;
+  color: #333;
   text-decoration: none;
   font-weight: 500;
   width: 100%;
+  text-align: left;
+  border-radius: 0;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 4px 0;
+}
+
+/* Efeito hover no sidenav */
+.sidenav a[mat-button]:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateX(4px);
+  color: var(--md-sys-color-primary);
 }
 
 /* Link ativo no sidenav */
 .sidenav a.active-link {
-  color: red;
+  color: var(--md-sys-color-primary);
   font-weight: bold;
+  background-color: rgba(var(--md-sys-color-primary-rgb), 0.1);
+  transform: translateX(8px);
+}
+
+/* Indicador lateral para link ativo no sidenav */
+.sidenav a.active-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 4px;
+  height: 0;
+  background-color: var(--md-sys-color-primary);
+  transform: translateY(-50%);
+  animation: expandVerticalIndicator 0.3s ease-out forwards;
+}
+
+@keyframes expandVerticalIndicator {
+  from {
+    height: 0;
+  }
+  to {
+    height: 60%;
+  }
 }
 
 /* === Backdrop cobrindo toda a tela === */
@@ -128,10 +207,6 @@ mat-sidenav-content {
   background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
-.nav-links a[mat-button],
-.sidenav a[mat-list-item] {
-  transition: color 0.3s ease;
-}
 
 /* === Responsividade === */
 @media (max-width: 768px) {

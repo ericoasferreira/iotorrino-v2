@@ -7,7 +7,9 @@
     @if (!isMobile) {
     <div class="nav-links">
         <a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-        <a mat-button routerLink="/sobre" routerLinkActive="active-link">Sobre</a>
+        <a mat-button routerLink="/tratamentos" routerLinkActive="active-link">Tratamentos</a>
+        <a mat-button routerLink="/exames" routerLinkActive="active-link">Exames</a>
+        <a mat-button routerLink="/artigos" routerLinkActive="active-link">Artigos</a>
         <a mat-button routerLink="/contato" routerLinkActive="active-link">Contato</a>
     </div>
     }
@@ -25,8 +27,10 @@
         <mat-nav-list>
             <a mat-button routerLink="/" routerLinkActive="active-link"
                 [routerLinkActiveOptions]="{ exact: true }">Home</a>
-            <a mat-button routerLink="/sobre" routerLinkActive="active-link">Sobre</a>
-            <a mat-button routerLink="/contato" routerLinkActive="active-link">Contato</a>
+                <a mat-button routerLink="/tratamentos" routerLinkActive="active-link">Tratamentos</a>
+                <a mat-button routerLink="/exames" routerLinkActive="active-link">Exames</a>
+                <a mat-button routerLink="/artigos" routerLinkActive="active-link">Artigos</a>
+                <a mat-button routerLink="/contato" routerLinkActive="active-link">Contato</a>
         </mat-nav-list>
     </mat-sidenav>
 

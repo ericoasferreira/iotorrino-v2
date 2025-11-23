@@ -50,9 +50,15 @@ export class HeaderComponent implements OnInit {
         .replace(/azure-theme|green-theme|orange-theme|red-theme|gray-theme/g, '').trim();
 
       // Aplica o tema baseado na rota
-      if (url.startsWith('/sobre')) {
+      if (url.startsWith('/tratamentos')) {
         this.currentTheme = 'green-theme';
         document.documentElement.className += ' green-theme';
+      } else if (url.startsWith('/exames')) {
+        this.currentTheme = 'gray-theme';
+        document.documentElement.className += ' gray-theme';
+      } else if (url.startsWith('/artigos')) {
+        this.currentTheme = 'red-theme';
+        document.documentElement.className += ' red-theme';
       } else if (url.startsWith('/contato')) {
         this.currentTheme = 'orange-theme';
         document.documentElement.className += ' orange-theme';
