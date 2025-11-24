@@ -1,35 +1,99 @@
 @use '@angular/material' as mat;
 
+/* === Google Fonts Import - Montserrat === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 /* === Reset global === */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
   overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
 }
 
 // Temas personalizados usando variáveis CSS
 .azure-theme {
-  --md-sys-color-primary: #2b3e6e;
+  --md-sys-color-primary: #193f73;
+  --md-sys-color-secondary: #3b5b87;
+  --md-sys-color-tertiary: #112A4D;
+  --md-sys-color-quaternary: #395e91;
+  --md-sys-color-quinary: #071a36;
   --md-sys-color-on-primary: #ffffff;
 }
 
 .green-theme {
-  --md-sys-color-primary: #72908e;
+  --md-sys-color-primary: #63918E;
+  --md-sys-color-secondary: #7aa19f;
+  --md-sys-color-tertiary: #1D534F;
+  --md-sys-color-quaternary: #2d6b67;
+  --md-sys-color-quinary: #07362c;
   --md-sys-color-on-primary: #ffffff;
 }
 
 .orange-theme {
-  --md-sys-color-primary: #b7916c;
+  --md-sys-color-primary: #c49166;
+  --md-sys-color-secondary: #cc9f7a;
+  --md-sys-color-tertiary: #873f08;
+  --md-sys-color-quaternary: #ba6520;
+  --md-sys-color-quinary: #4a2303;
   --md-sys-color-on-primary: #ffffff;
 }
 
 .red-theme {
-  --md-sys-color-primary: #996f65;
+  --md-sys-color-primary: #a66d63;
+  --md-sys-color-secondary: #b38279;
+  --md-sys-color-tertiary: #45170e;
+  --md-sys-color-quaternary: #612b21;
+  --md-sys-color-quinary: #290903;
   --md-sys-color-on-primary: #ffffff;
 }
 
 .gray-theme {
-  --md-sys-color-primary: #5d6d79;
+  --md-sys-color-primary: #546e7a;
+  --md-sys-color-secondary: #6e858f;
+  --md-sys-color-tertiary: #123040;
+  --md-sys-color-quaternary: #1b3f52;
+  --md-sys-color-quinary: #0b1f29;
   --md-sys-color-on-primary: #ffffff;
+}
+
+.section-text {
+  padding: 40px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  /* Desktop: margem mínima de 16px nas laterais, expandindo até 1970px */
+  width: calc(100% - 64px);
+  max-width: 1970px;
+  border-radius: 15px;
+}
+
+.section-text p {
+  font-size: 0.9rem;
+}
+
+.section-primary {
+  background-color: #fff;
+  color: var(--md-sys-color-tertiary);
+}
+
+.section-tertiary {
+  background-color: var(--md-sys-color-tertiary);
+  color: #fff;
+}
+
+.section-quaternary {
+  background-color: var(--md-sys-color-quaternary);
+  color: #fff;
+}
+
+.section-quinary {
+  background-color: var(--md-sys-color-quinary);
+  color: #fff;
 }

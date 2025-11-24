@@ -1,0 +1,14 @@
+h1 {
+    font-size: clamp(4vw, 4vw, 5rem);
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: clamp(2.5vw, 2.5vw, 3rem);
+    color: #fff;
+}
+
+h1>span {
+    font-size: clamp(1.5vw, 1.5vw, 1.5rem);
+    font-weight: 500;
+    padding-left: clamp(6vw, 6vw, 3rem);
+    letter-spacing: clamp(0.5vw, 0.5vw, 0.8rem);
+}

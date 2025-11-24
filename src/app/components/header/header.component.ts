@@ -13,6 +13,7 @@ import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
+  standalone: true,
   imports: [MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule, MatButtonModule, RouterModule, RouterOutlet],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'

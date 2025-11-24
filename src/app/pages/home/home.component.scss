@@ -1,43 +1,49 @@
-/* Este é o CSS para o seu componente Angular (ex.: app.component.css) */
-/* Importe a fonte Montserrat no seu index.html ou globalmente: <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> */
+// /* Este é o CSS para o seu componente Angular (ex.: app.component.css) */
+// /* Importe a fonte Montserrat no seu index.html ou globalmente: <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> */
 
-.container {
-    background-color: #00008B; /* Azul escuro */
-    min-height: 100vh;
+// .container {
+//     background-color: #00008B; /* Azul escuro */
+//     min-height: 100vh;
+//     margin: 0;
+//     padding: 0;
+//     font-family: 'Montserrat', sans-serif;
+//     color: white;
+//   }
+  
+//   h1 {
+//     text-align: center;
+//     font-size: 48px;
+//     font-weight: 700;
+//     margin: 0;
+//     padding-top: 50px; /* Espaço inicial */
+//     margin-bottom: 250px; /* Espaço de 250px abaixo do título */
+//   }
+  
+//   .section {
+//     background-color: white;
+//     color: black;
+//     padding: 40px;
+//     box-sizing: border-box;
+//     margin: 0 auto;
+//     /* Desktop: margem mínima de 16px nas laterais, expandindo até 1970px */
+//     width: calc(100% - 64px);
+//     max-width: 1970px;
+//   }
+  
+//   /* Mobile: margem de 5px de cada lado */
+//   @media (max-width: 768px) {
+//     .section {
+//       width: calc(100% - 20px);
+//       margin: 0 10px;
+//     }
+//     h1 {
+//       font-size: 36px; /* Ajuste para mobile */
+//     }
+//   }
+
+.container-fluid {
+    background-color: var(--md-sys-color-primary);
     margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 48px;
-    font-weight: 700;
-    margin: 0;
-    padding-top: 50px; /* Espaço inicial */
-    margin-bottom: 250px; /* Espaço de 250px abaixo do título */
-  }
-  
-  .section {
-    background-color: white;
-    color: black;
-    padding: 40px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    /* Desktop: margem mínima de 16px nas laterais, expandindo até 1970px */
-    width: calc(100% - 64px);
-    max-width: 1970px;
-  }
-  
-  /* Mobile: margem de 5px de cada lado */
-  @media (max-width: 768px) {
-    .section {
-      width: calc(100% - 20px);
-      margin: 0 10px;
-    }
-    h1 {
-      font-size: 36px; /* Ajuste para mobile */
-    }
-  }
-  
+}
+
+
